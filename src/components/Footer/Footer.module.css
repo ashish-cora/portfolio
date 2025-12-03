@@ -1,0 +1,11 @@
+.footerWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+}

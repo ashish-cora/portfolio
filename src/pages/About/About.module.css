@@ -1,0 +1,41 @@
+.aboutWrapper{
+    margin-top: 15vh; /* to counter header fixed height of 10vh */
+    margin-bottom: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75vw;
+}
+
+.imageTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 4px;
+}
+
+.imageDiv{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    box-shadow: 
+    0 0 20px 8px rgba(240, 236, 240, 0.593),
+    0 0 40px 16px rgba(120, 40, 186, 0.593);
+}
+
+.imageDiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imageDescription{
+    width: 75%;
+    margin: 7px auto;
+    padding: 4px;
+    font-size: 12px;
+}
+

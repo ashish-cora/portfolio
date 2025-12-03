@@ -1,0 +1,14 @@
+.cardDiv{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 75vw;
+    height: 30vh;
+    background-color: #1a0a2e;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #4d2587;
+}
+
+.cardDiv p{
+    font-size: 12px;
+}

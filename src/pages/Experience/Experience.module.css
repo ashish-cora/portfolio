@@ -1,0 +1,132 @@
+.experienceWrapper{
+    width: 75vw;
+    margin: 2rem auto;
+    padding: 4px;
+}
+
+.cardsContainer{
+    margin: 1rem;
+    position: relative;
+}
+
+.hiddenGlowDiv{
+    /* visibility: hidden; */
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 
+    0 0 90px 90px rgba(240, 236, 240, 0.593),
+    0 0 90px 120px rgba(120, 40, 186, 0.593);
+
+}
+
+.hireMeWrapper{
+    margin: 1rem auto;
+}
+
+.highlightedHireMe{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hireMe{
+    font-size: 12px;
+}
+
+.techImageDiv{
+    height: 45vh;
+}
+
+.techImageDiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Custom Properties for easy tuning */
+:root {
+    /* #6600ff */
+  --cv-button-color: #6231aa;
+  --shimmer-color: #79ff4d; /* Wisp color */
+  --radius: 100px; /* Button border radius */
+  --spread: 90deg; /* Length of the wisp */
+  --cut: 0.1em; /* Thickness of the border/wisp */
+  --speed: 2s; /* Rotation speed */
+}
+
+/* * 1. Define the rotation animation
+ */
+@keyframes spin-around {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* * 2. Style the Wrapper (The Container for the Light)
+ */
+.cvWrapper {
+  /* Crucial: Clips the rotating light to the button shape */
+  position: relative; 
+  overflow: hidden; 
+  /* Sets the button's final rounded corners */
+  border-radius: var(--radius); 
+  /* Ensures the wrapper fits the button's width */
+  box-shadow: 0 0 40px 1px #a795c2ff;
+  display: inline-block;
+  padding: 1px;
+}
+
+/* * 3. The Revolving Light Pseudo-Element
+ */
+.cvWrapper::before {
+  content: "";
+  position: absolute;
+  /* Make it very large and centered */
+  top: -200%; 
+  left: -200%;
+  width: 500%;
+  height: 500%;
+  z-index: -1; /* Place behind the button content */
+  
+  /* The Magic: Conic Gradient and Animation */
+  background: conic-gradient(
+    from calc(270deg - (var(--spread) * 0.5)),
+    transparent 0,
+    var(--shimmer-color) var(--spread),
+    transparent var(--spread)
+  );
+  
+  /* Apply the animation */
+  animation: spin-around var(--speed) linear infinite;
+}
+
+/* * 4. Style the Button (The Inner Cutter)
+ */
+/* Assuming Cv is a button, you need to target it */
+.cvWrapper > button { 
+  /* Ensure the button is above the pseudo-element and has the solid background */
+  position: relative;
+  z-index: 1; 
+  background: var(--cv-button-color);
+  color: #ffffff; /* Button text color */
+  
+  /* Use 'padding' and 'border-radius' for the cut-out effect */
+  border-radius: calc(var(--radius) - var(--cut)); /* Slightly smaller radius */
+  /* Remove the default border if any */
+  border: none; 
+  
+  /* Add padding for size, adjust as needed */
+  padding: 10px 20px; 
+}
+
+/* Optional: Add hover effect to brighten the light */
+.cvWrapper:hover::before {
+  /* Increase the blur or brightness on hover */
+  filter: brightness(1.5);
+}

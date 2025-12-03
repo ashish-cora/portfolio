@@ -1,0 +1,23 @@
+.headerDiv{
+    background-color: #1a0a2e;
+    height: 10vh;
+    width: 100vw;
+    z-index: 10;
+    display: flex;
+    justify-content:  flex-end;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.headerWrapper{
+    display: flex;
+    justify-content: flex-end;
+    width: inherit;
+    
+}
+
+.headerContent{
+    margin: 4px;
+    padding: 4px;
+}
