@@ -9,8 +9,6 @@ interface ExperienceType{
 }
 
 const Cards = (props: ExperienceType) => {
-    console.log("props=>>>>>", props.experience);
-    
   return (
     <div className={styles.cardDiv}>
         <h4>Company: {props.experience.name}</h4>

@@ -1,12 +1,14 @@
 .experienceWrapper{
-    width: 75vw;
-    margin: 2rem auto;
-    padding: 4px;
+  /* display: flex;
+  flex-direction: column;
+  gap: 1rem; */
 }
 
 .cardsContainer{
-    margin: 1rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .hiddenGlowDiv{
@@ -24,7 +26,8 @@
 }
 
 .hireMeWrapper{
-    margin: 1rem auto;
+    margin: 0
+     auto;
 }
 
 .highlightedHireMe{

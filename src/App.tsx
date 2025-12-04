@@ -12,9 +12,11 @@ function App() {
   return (
     <div id={styles.container}>
       <Header />
-      <About />
-      <Experience />
-      <Footer />
+        <div className={styles.appWrapper}>
+          <About />
+          <Experience />
+          <Footer />
+        </div>
     </div>
   )
 }
